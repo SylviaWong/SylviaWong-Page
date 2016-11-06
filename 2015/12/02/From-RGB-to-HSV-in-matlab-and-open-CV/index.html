@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>From RGB to HSV in matlab and OpenCV | Sylvia&#39;s</title>
+  <meta name="author" content="Sylvia Wong">
+  
+  <meta name="description" content="OpenCV  hsv
+Simple inline $a = b + c$.matlab  hsv$$ H =\begin{cases} (G - B)/6(V - \min (R,G,B)), &amp;amp; \text{if $V=R$} ;\ 2 + (B - R)/6(V - \min (R,G">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="From RGB to HSV in matlab and OpenCV"/>
+  <meta property="og:site_name" content="Sylvia&#39;s"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="/atom.xml" title="Sylvia&#39;s" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Sylvia&#39;s</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-12-02T08:02:31.000Z"><a href="/2015/12/02/From-RGB-to-HSV-in-matlab-and-open-CV/">Dec 2 2015</a></time>
+      
+      
+  
+    <h1 class="title">From RGB to HSV in matlab and OpenCV</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="OpenCV-hsv"><a href="#OpenCV-hsv" class="headerlink" title="OpenCV  hsv"></a>OpenCV  hsv</h3><p><img src="/images/RGB-HSV_01.png" alt=""><br><img src="/images/RGB-HSV_02.png" alt=""></p>
+<h2 id="Simple-inline-a-b-c"><a href="#Simple-inline-a-b-c" class="headerlink" title="Simple inline $a = b + c$."></a>Simple inline $a = b + c$.</h2><h3 id="matlab-hsv"><a href="#matlab-hsv" class="headerlink" title="matlab  hsv"></a>matlab  hsv</h3><p>$$ H =<br>\begin{cases} (G - B)/6(V - \min (R,G,B)), &amp; \text{if $V=R$} ;\<br> 2 + (B - R)/6(V - \min (R,G,B)), &amp; \text{if $V=G$} ;\<br> 4 + (R - G)/6(V - \min (R,G,B)), &amp; \text{if $V=B$}<br>\end{cases}$$<br>(MathJax渲染的格式有点奇怪，条件公式）</p>
+<p><code>if h &lt; 0 then h += 1</code></p>
+<p>其他一样<br>bgr - hsv - scale to 1/255</p>
+<p>rgb<br><img src="/images/RGB-HSV_03.png" alt=""><br>hsv<br><img src="/images/RGB-HSV_04.png" alt=""></p>
+<hr>
+<p>然而，histogram实现的结果有点不一样，同样是16 bins<br><img src="/images/RGB-HSV_05.png" alt=""><br><img src="/images/RGB-HSV_06.png" alt=""></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+
+<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2015/12/02/From-RGB-to-HSV-in-matlab-and-open-CV/" data-title="From RGB to HSV in matlab and OpenCV" data-url="http://sylviawong.github.io/2015/12/02/From-RGB-to-HSV-in-matlab-and-open-CV/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"sylviawong"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:sylviawong.github.io">
+  </form>
+</div>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 Sylvia Wong
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+</body>
+</html>
